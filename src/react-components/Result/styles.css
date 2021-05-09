@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Roboto:wght@300;900&display=swap");
+
+#resultTitle {
+  margin: 40px 34px;
+  color: #faf7ee;
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+}
+#keyword {
+  color: #c7ebd0;
+}
+.result {
+  float: left;
+  display: inline;
+  width: 50%;
+}
+.movie-list {
+  margin: 20px 20px;
+  text-align: center;
+  width: 80%;
+}

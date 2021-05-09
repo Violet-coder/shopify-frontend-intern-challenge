@@ -3,15 +3,16 @@ import Movie from "../Movie";
 import { uid } from "react-uid";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
+import "./styles.css";
 
 
 
 class Result extends React.Component {  
     render() {
-      const {SearchPage, ResultList} = this.props
+      const {searchInput, SearchPage, ResultList} = this.props
       return (
         <div className="result">
-        {/* <h3>Result for {searchInput}</h3>  */}
+         {searchInput ? <h3 id = "resultTitle">Movie results for: <span id = "keyword">{`"${searchInput}"`}</span></h3> : null}       
         <Table className="movie-list">
           <TableBody>
           {ResultList ? ResultList.map(movie => (

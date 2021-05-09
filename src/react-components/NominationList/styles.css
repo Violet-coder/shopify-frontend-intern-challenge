@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Roboto:wght@300;900&display=swap");
+
+#nominatedTitle {
+  margin: 40px 18px;
+  color: #faf7ee;
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.nominationList {
+  /* float: left; */
+  /* display: inline; */
+  left: 50%;
+  width: 50%;
+  position: absolute;
+}

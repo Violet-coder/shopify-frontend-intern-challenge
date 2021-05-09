@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import {removeNomination} from "../../actions/nomination"
+import './styles.css'
 
 class Nomintaion extends React.Component {
 
@@ -11,17 +12,17 @@ class Nomintaion extends React.Component {
   
       return (
         <TableRow className="student" key={nomination.title}>
-          <TableCell component="th" scope="row">
+          <TableCell className="tableCell" component="th" scope="row">
             {nomination.title}
           </TableCell>
   
-          <TableCell component="th" scope="row">
+          <TableCell className="tableCell" component="th" scope="row">
             {nomination.year}
           </TableCell>
-          <TableCell component="th" scope="row">
+          <TableCell className="tableCell" component="th" scope="row">
             <Button
+              className="removeButton"
               variant="contained"
-              color="secondary"
               onClick={() => removeNomination(SearchPage, nomination)}
             >
               Remove

@@ -1,14 +1,15 @@
 import React from "react";
+import "./styles.css"
 
 
 class AlertDialog extends React.Component {
       
     render() {
       return (
-        <div>
-          <h2>Good Choices!</h2>
-          <h4>You have reached the 5 film nomination limit.</h4>
-          <h5>Remove any film to nominate new one </h5>
+        <div class = "alertDialog">
+          <h2 id = "title">Thank you for your choices！</h2>
+          <h4 class = "subtitle">You have reached the 5 movie nomination limit</h4>
+          <h5 class = "subtitle">Remove any movie to nominate new one </h5>
         </div>
         
         

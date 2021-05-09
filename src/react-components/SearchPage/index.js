@@ -25,6 +25,7 @@ class SearchPage extends React.Component {
           [name]: value 
         });
         search(value, this)
+        
 
 
       };
@@ -33,10 +34,13 @@ class SearchPage extends React.Component {
       return (
         <div className="App">
         <Header title = {'The Shoppies'}/>
-        {this.state.nominationList.length < 5 ? <Input title = {'Movie'} searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />  :  null }
-        {this.state.searchInput ? <h3>Result for {this.state.searchInput}</h3> : null}
-        {this.state.nominationList.length < 5 ? <Result SearchPage = {this}  ResultList = {this.state.searchResult}/> :  <AlertDialog/> }
-        <NominationList SearchPage = {this} nominationList = {this.state.nominationList}/>        
+        {/* {this.state.nominationList.length < 5 ? <Input searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />  :  null } */}
+        <Input nominationList = {this.state.nominationList} searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />
+        <div class = "content">
+          {this.state.nominationList.length < 5 ? <Result searchInput = {this.state.searchInput} SearchPage = {this}  ResultList = {this.state.searchResult}/> :  <AlertDialog/> }
+          <NominationList SearchPage = {this} nominationList = {this.state.nominationList}/> 
+        </div>
+               
         </div>
       );
     }
