@@ -15,7 +15,7 @@ class Result extends React.Component {
         <div className="result">
          {searchInput ? <h3 id = "resultTitle">Movie results for: <span id = "keyword">{`"${searchInput}"`}</span></h3> : null}
          {searchInput&& !SearchPage.state.searchResultLoaded ? <CircularProgress className="circularProgress" size={60}/> : null} 
-         {searchInput&&SearchPage.state.searchResultLoaded&&SearchPage.state.tooManyResults ? <SnackbarContent className = "snackbarContent" message={
+         {searchInput&&SearchPage.state.searchResultLoaded&&SearchPage.state.tooManyResults&&ResultList.length<1 ? <SnackbarContent className = "snackbarContent" message={
           'Too many results. \nPlease adjust your search.'
         }/>: null}      
         <Table className="movie-list">
