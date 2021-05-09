@@ -11,7 +11,7 @@ class Nomintaion extends React.Component {
       const { SearchPage, nomination } = this.props;
   
       return (
-        <TableRow className="student" key={nomination.title}>
+        <TableRow className="tableRow" key={nomination.title}>
           <TableCell className="tableCell" component="th" scope="row">
             {nomination.title}
           </TableCell>

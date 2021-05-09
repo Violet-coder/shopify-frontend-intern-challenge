@@ -19,3 +19,23 @@
   text-align: center;
   width: 80%;
 }
+
+.MuiCircularProgress-colorPrimary {
+  color: #c7ebd0 !important;
+  margin-left: 150px;
+}
+.MuiSnackbarContent-root {
+  /* text-align: center; */
+  margin-left: 30px;
+  margin-top: 25px;
+  background-color: #f29c38 !important;
+  color: #faf7ee !important;
+  font-size: 1.15em !important;
+  width: 70px;
+  height: 60px;
+  white-space: pre-line !important;
+}
+.MuiSnackbarContent-message {
+  margin: auto;
+  text-align: center;
+}

@@ -13,11 +13,19 @@ class SearchPage extends React.Component {
         searchInput: "",
         searchResult: [],
         nominationList:[],
+        searchResultLoaded: false,
+        tooManyResults:false
       };
 
      
     
       handleInputChange = event => {
+        this.setState({
+          searchResult: [],
+          searchResultLoaded: false,
+          tooManyResults: false
+        })
+        
         const target = event.target;
         const value = target.value;
         const name = target.name;
@@ -25,6 +33,7 @@ class SearchPage extends React.Component {
           [name]: value 
         });
         search(value, this)
+       
         
 
 
@@ -36,7 +45,8 @@ class SearchPage extends React.Component {
         <Header title = {'The Shoppies'}/>
         {/* {this.state.nominationList.length < 5 ? <Input searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />  :  null } */}
         <Input nominationList = {this.state.nominationList} searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />
-        <div class = "content">
+        <div className = "content">
+
           {this.state.nominationList.length < 5 ? <Result searchInput = {this.state.searchInput} SearchPage = {this}  ResultList = {this.state.searchResult}/> :  <AlertDialog/> }
           <NominationList SearchPage = {this} nominationList = {this.state.nominationList}/> 
         </div>
