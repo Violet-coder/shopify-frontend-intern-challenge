@@ -20,3 +20,6 @@
   width: 30%;
   /* bottom: 2px; */
 }
+.MuiInputBase-input .MuiOutlinedInput-input {
+  border-color: "red";
+}

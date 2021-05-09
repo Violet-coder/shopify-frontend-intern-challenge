@@ -1,18 +1,19 @@
 const log = console.log;
 
 export const addNomination = (searchPage, title, year) => {
-    const nomintaionList = searchPage.state.nominationList;
+    const nominationList = searchPage.state.nominationList;
   
     const movie = {
       title: title,
       year: year
     };
     
-    nomintaionList.push(movie)
-    if (nomintaionList.length <= 5){
+    nominationList.push(movie)
+    if (nominationList.length <= 5){
       searchPage.setState({
-      nominationList: nomintaionList
+      nominationList: nominationList
     })
+     localStorage.setItem('nominationList', JSON.stringify(nominationList))
     } else {
       // do nothing should not set the state when the nomintaionList exceed 5
     }
@@ -29,4 +30,6 @@ export const removeNomination = (searchPage, movie) => {
     searchPage.setState({
       nominationList: filteredNominations
     });
+
+    localStorage.setItem('nominationList', JSON.stringify(filteredNominations))
 };

@@ -33,11 +33,16 @@ class SearchPage extends React.Component {
           [name]: value 
         });
         search(value, this)
-       
-        
-
 
       };
+
+    componentDidMount(){
+      const localData = localStorage.getItem('nominationList');
+      if (localData){
+        const pulldata = JSON.parse(localData)
+        this.setState({ nominationList: pulldata})
+      }
+    }
   
     render() {
       return (
