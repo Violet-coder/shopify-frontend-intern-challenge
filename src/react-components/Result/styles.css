@@ -18,6 +18,11 @@
   margin: 20px 20px;
   text-align: center;
   width: 80%;
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  animation: fadein 1s;
 }
 
 .MuiCircularProgress-colorPrimary {
@@ -37,6 +42,33 @@
   white-space: pre-line !important;
 }
 .MuiSnackbarContent-message {
-  margin: auto;
   text-align: center;
+  margin: auto;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -2,7 +2,6 @@ const log = console.log
 
 // Function to add a student, needs to be exported
 export const search = (userkeyword, SearchPage) => {
-    log("searching  with OMDB's API");
     const url = `https://www.omdbapi.com/?s=${userkeyword}&apikey=36fff3ff&type=movie`
     fetch(url)
     .then(res => {

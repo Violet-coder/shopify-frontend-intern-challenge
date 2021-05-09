@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Roboto:wght@300;900&display=swap");
+
+.footer {
+  /* margin-top: 2px; */
+  /* padding: 2px; */
+  margin-top: -10px;
+  bottom: 10px;
+  position: absolute;
+  /* height: 10vh; */
+  width: 100%;
+  /* background-color: #0f2d25; */
+  color: #faf7ee;
+  text-align: center;
+  /* line-height: 24px; */
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer a {
+  color: #faf7ee;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #f8cb77;
+  text-decoration: none;
+}
+
+.copyright-text {
+  margin: 0;
+}

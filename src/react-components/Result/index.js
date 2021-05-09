@@ -13,10 +13,10 @@ class Result extends React.Component {
       const {searchInput, SearchPage, ResultList} = this.props
       return (
         <div className="result">
-         {searchInput ? <h3 id = "resultTitle">Movie results for: <span id = "keyword">{`"${searchInput}"`}</span></h3> : null}
+         {searchInput ? <h3 id = "resultTitle">Movie results for : <span id = "keyword">{`"${searchInput}"`}</span></h3> : <h3 id = "resultTitle">Try to search by movies titles</h3>}
          {searchInput&& !SearchPage.state.searchResultLoaded ? <CircularProgress className="circularProgress" size={60}/> : null} 
          {searchInput&&SearchPage.state.searchResultLoaded&&SearchPage.state.tooManyResults&&ResultList.length<1 ? <SnackbarContent className = "snackbarContent" message={
-          'Too many results. \nPlease adjust your search.'
+          'Too many results \nPlease adjust your search'
         }/>: null}      
         <Table className="movie-list">
           <TableBody>

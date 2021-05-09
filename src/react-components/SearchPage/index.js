@@ -7,6 +7,7 @@ import Input from "./../Input";
 import Result from "./../Result";
 import NominationList from "../NominationList"
 import AlertDialog from '../AlertDialog'
+import Footer from "../Footer"
 
 class SearchPage extends React.Component {
     state = {
@@ -49,12 +50,16 @@ class SearchPage extends React.Component {
         <div className="App">
         <Header title = {'The Shoppies'}/>
         {/* {this.state.nominationList.length < 5 ? <Input searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />  :  null } */}
-        <Input nominationList = {this.state.nominationList} searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />
+        <main class="Site-content">
+         <Input nominationList = {this.state.nominationList} searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />
         <div className = "content">
 
           {this.state.nominationList.length < 5 ? <Result searchInput = {this.state.searchInput} SearchPage = {this}  ResultList = {this.state.searchResult}/> :  <AlertDialog/> }
           <NominationList SearchPage = {this} nominationList = {this.state.nominationList}/> 
-        </div>
+        </div> 
+        </main>
+   
+        <Footer />
                
         </div>
       );
