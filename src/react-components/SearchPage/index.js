@@ -48,18 +48,14 @@ class SearchPage extends React.Component {
     render() {
       return (
         <div className="App">
-        <Header title = {'The Shoppies'}/>
-        {/* {this.state.nominationList.length < 5 ? <Input searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />  :  null } */}
-        {/* <main class="Site-content"> */}
+        <Header title = {'The Shoppies'}/>     
          <Input nominationList = {this.state.nominationList} searchInput = {this.state.searchInput} handleChange = {this.handleInputChange} />
         <div className = "content">
 
           {this.state.nominationList.length < 5 ? <Result searchInput = {this.state.searchInput} SearchPage = {this}  ResultList = {this.state.searchResult}/> :  <AlertDialog/> }
           <NominationList SearchPage = {this} nominationList = {this.state.nominationList}/> 
         </div> 
-        {/* </main> */}
-   
-        <Footer className="Footer"/>
+        {/* <Footer className="Footer"/> */}
                
         </div>
       );
