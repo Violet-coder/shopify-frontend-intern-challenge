@@ -21,6 +21,9 @@ https://afternoon-lowlands-46284.herokuapp.com
 - From the root directory `shopify-frontend-intern-challenge` and run following commands to build the React app and start the Express server.
 
   ```
+  # install dependencies
+  npm install
+
   # build the React app
   npm run build
 
